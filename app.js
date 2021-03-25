@@ -105,7 +105,7 @@ function superFight() {
         arrow = "fas fa-equals text-light"
         fightColor = "text-light"
         fightText = "It's a <strong>draw</strong>!"
-        fightSound = ""
+        fightSound = "LAME!"
     } else if (player.win.includes(`${computer.name.toLowerCase()}`)) {
         playerStatus = "win"
         computerStatus = "lose"
@@ -128,26 +128,27 @@ function draw() {
     let arenaElement = document.getElementById("arena")
     let template = `
             <div id="arena">
-            <div class="row justify-content-center text-center">
-                <div class="col-8 card bg-dark text-warning mb-5">
+            <div class="row justify-content-center text-center py-4 py-md-0">
+                <div class="col-11 col-md-8 card shadow bg-dark text-warning mb-5">
                     <p class= "title pt-3 mb-0"> <strong>${fightSound}</strong> </p>
-                    <p id="fight" class="title mt-0 ${fightColor}">${fightText}</p>
+                    <p class="title mt-0 ${fightColor}">${fightText}</p>
                 </div>
             </div>
-            <div class="row justify-content-center text-center pt-3">
-                <div class="col-3">
+            <div class="row justify-content-center text-center pb-3 pb-md-4 pt-3 pt-md-3">
+                <div class="col-6 col-md-3">
                     <button class="${playerStatus} big-button" onclick="chooseWeapon('${player.name.toLowerCase()}')">
                         <p><i class="${player.icon}"></i></p>
                     </button>
                 </div>
-                <div class="col-2">
-                    <p><i class="${arrow} aligh-middle big-title py-3" onclick="location.reload()"></i></p>
+                <div class="col-2 d-none d-md-block">
+                    <p><i class="${arrow} aligh-middle big-title" onclick="location.reload()"></i></p>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-md-3">
                     <button class="${computerStatus} big-button" onclick="chooseWeapon('${computer.name.toLowerCase()}')">
                         <p><i class="${computer.icon}"></i></p>
                     </button>
                 </div>
+            </div>
             </div>
         `
     arenaElement.innerHTML = template

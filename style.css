@@ -47,11 +47,11 @@
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 4vh;
 }
 
 .big-title {
-    font-size: 10rem;
+    font-size: 8rem;
     opacity: 75%;
 }
 
@@ -86,18 +86,18 @@
 }
 
 .big-button {
-    height: 12rem;
-    width: 12rem;
-    font-size:6rem;
+    height: 17vh;
+    width: 17vh;
+    font-size: 10vh;
 }
 
 button {
     background-color: var(--dark);
     border: transparent;
     border-radius: 50%;
-    height: 7.5rem;
-    width: 7.5rem;
-    font-size: 4rem;
+    height: 12vh;
+    width: 12vh;
+    font-size: 6vh;
     transition: all .5s ease-in-out;
 }
 
@@ -112,16 +112,17 @@ body {
     background-color: var(--dark)
 }
 
-main {
-    flex-grow: 100vw;
-}
-
 h1 {
     color: var(--primary);
     font-weight: bold;
 }
 
 h2 {
+    color: var(--warning);
+    font-weight: bold;
+}
+
+h3 {
     color: var(--warning);
     font-weight: bold;
 }
